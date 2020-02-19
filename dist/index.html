@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LIGA A</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+	<header id="header" class="header">
+		<div class="header__content container">
+			<a href="#" class="header__logo">
+				<img src="img/logo.png" class="header__logo-img">
+			</a>
+			<nav class="header__nav nav">
+				<a href="#" class="nav__item">Почему мы?</a>
+				<a href="#" class="nav__item">Номера</a>
+				<a href="#" class="nav__item">Отзывы</a>
+				<a href="#" class="nav__item">Как нас найти</a>
+			</nav>
+		</div>
+	</header>
+	<section class="main container">
+		<div class="main__top-block">
+			<h1 class="main__title">Наши номера</h1>
+			<ul class="main__sorting-container sorting">
+				<li class="sorting__item" value="1" data-sign="square">↑ По площади</li>
+				<li class="sorting__item" value="-1" data-sign="square">↓ По площади</li>
+				<li class="sorting__item" value="1" data-sign="price">↑ По цене</li>
+				<li class="sorting__item" value="-1" data-sign="price">↓ По цене</li>
+			</ul>
+		</div>
+		<div class="main__catalog-block catalog">
+			<div class="catalog__filter filter">
+				<form id="filter_form">
+				<div class="filter__item filter-item">
+					<span class="filter-item__title">Цена за сутки</span>
+					<div class="filter-item__properties price">
+						<input class="price__one price__input" type="number" name=""><span class="price__span">от</span>
+						<input class="price__two price__input" type="number" name=""><span class="price__span">до</span>
+					</div>
+				</div>
+				<div class="filter__item">
+					<span class="filter-item__title">Площадь</span>
+					<div class="filter-item__properties square">
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="xs">
+								0,63 м²
+							</label>
+						</div>
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="s">
+								0,90 м²
+							</label>
+						</div>
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="m">
+								1,13 м²
+							</label>
+						</div>
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="l">
+								1,56 м²
+							</label>
+						</div>
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="xl">
+								2,56 м²
+							</label>
+						</div>
+						<div class="square__item">
+							<label class="square__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox square__item-input" value="xxl">
+								2,88 м²
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="filter__item">
+					<span class="filter-item__title">Оснащение номера</span>
+					<div class="filter-item__properties complectation">
+						<div class="complectation__item">
+							<label class="complectation__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox complectation__item-input" value="none">
+								Пустой номер
+							</label>
+						</div>
+						<div class="complectation__item">
+							<label class="complectation__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox complectation__item-input" value="bad">
+								Лежак
+							</label>
+						</div>
+						<div class="complectation__item">
+							<label class="complectation__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox complectation__item-input" value="nail">
+								Когтеточка
+							</label>
+						</div>
+						<div class="complectation__item">
+							<label class="complectation__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox complectation__item-input" value="games">
+								Игровой-комплекс
+							</label>
+						</div>
+						<div class="complectation__item">
+							<label class="complectation__item-text filter__checkbox-label">
+								<input type="checkbox" checked="checked" name="" class="filter__checkbox complectation__item-input" value="house">
+								Домик
+							</label>
+						</div>
+					</div>
+				</div>
+				<a class="filter__btn filter__btn--apply">Применить</a>
+				<a class="filter__btn filter__btn--clean">Сбросить фильтр</a>
+				</form>
+				<a class="filter__btn filter__btn--hide">Открыть фильтр</a>
+			</div>
+			<div>
+			<div class="catalog__catalog-content">
+			</div>
+			<span class="catalog__catalog-empty">Товаров, удовлетворяюбщих Вашему запросу, не найдено</span>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/libs.min.js"></script>
+</body>
+</html>
+

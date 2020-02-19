@@ -1,0 +1,439 @@
+@font-face  
+    font-family: 'Lato'
+    font-weight: 500
+    src: url('../fonts/Lato-Regular.ttf') format('truetype')
+
+@font-face  
+    font-family: 'Lato'
+    font-weight: 600
+    src: url('../fonts/Lato-Bold.ttf') format('truetype')
+
+$primary-color: #FF7236
+$darkgrey: #1A212F
+$grey: #E1E1E1
+$lightgrey: #FFFEFD
+$orange: #FF7236
+$deeporange: #F35E1F
+
+.body
+	margin: 0
+	color: #1A212F
+	font-family: Lato, sans-serif
+	font-weight: 500
+	font-size: 14px
+	background-color: $lightgrey
+
+.container
+	width: 1175px
+	margin: 0 auto
+
+.header
+	top: -75px
+	transition: .2s
+
+.header--fixed
+	position: fixed
+	width: 100%
+	background-color: #FFFFFF
+	box-shadow: 0px 0px 10px #00000030
+	top: 0
+	z-index: 2
+
+.header__content
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 9px
+	padding-bottom: 9px
+
+.header__logo
+	&:active
+		opacity: 0.7	
+
+.nav__item
+	margin-left: 32px
+	color: $darkgrey
+	text-decoration: none
+	font-weight: bold
+	font-size: 16px
+	transition: .2s
+	&:hover
+		color: $primary-color
+	&:active
+		opacity: 0.7
+
+.main
+	padding-bottom: 174px
+	margin-top: 50px
+
+.main__top-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+
+.main__title
+	font-size: 36px
+	font-weight: 800
+	line-height: 43px
+
+.main__sorting-container
+	position: absolute
+	right: 0
+	overflow: hidden
+	height: 29px
+	transition: .2s
+	top: calc( 50% - 29px )
+	list-style: none
+	padding-left: 20px
+	padding-bottom: 10px
+	width: 155px
+	background: #FFFFFF
+	border-radius: 4px
+	box-shadow: 0px 2px 12px rgba(173, 152, 143, 0)
+	cursor: pointer
+	display: flex
+	flex-direction: column
+	font-size: 14px
+	&:hover
+		box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
+	&:after
+		content: ''
+		position: absolute
+		right: 20px
+		top: 12px
+		width: 8px
+		height: 8px
+		border-left: 2px solid $darkgrey
+		border-bottom: 2px solid $darkgrey
+		transform: rotate(-45deg)
+		transition: .2s
+
+.sorting__item
+	padding-top: 12px
+
+.sorting__item.active
+	order: -1
+
+.main__sorting-container--open
+	height: 116px
+	box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
+	z-index: 1
+	&:after
+		transform: rotate(135deg)
+		top: 17px
+
+#filter_form
+	overflow: hidden
+
+.filter-item__title
+	font-size: 16px
+
+.filter-item__properties
+	margin-top: 20px 
+	margin-bottom: 35px
+	position: relative
+
+.price__input
+	border: 1px solid $grey
+	width: 100px
+	height: 27px
+	transition: .2s
+	outline: none
+	padding-left: 31px
+	padding-right: 5px
+	box-sizing: border-box
+	&:focus
+		border-color: $orange
+
+.price__span
+	position: absolute
+	left: 9px
+	top: 6px
+	&:nth-child(2)
+		left: 114px
+
+.filter__checkbox-label
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	cursor: pointer
+
+.filter__checkbox
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-right: 11px
+	&:after
+		content: ''
+		position: absolute
+		width: 20px
+		height: 20px
+		border: 1px solid $grey
+		box-sizing: border-box
+		background-color: #fff
+		margin-top: -1px
+	&:before
+		content: ''
+		position: absolute
+		width: 8px 
+		height: 5px
+		z-index: 1
+		border-left: 1px solid $darkgrey
+		border-bottom: 1px solid $darkgrey
+		top: 1px
+		left: 3px
+		transform: rotate(-45deg)
+		opacity: 0
+		transition: .2s
+	&:checked
+		&:before
+			opacity: 1
+
+.filter__btn
+	font-weight: bold
+	border-radius: 25px
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 185px
+	height: 42px
+	margin-bottom: 15px
+	color: $darkgrey
+	text-decoration: none
+	transition: .2s
+	box-sizing: border-box
+	cursor: pointer
+
+.filter__btn--apply
+	background-color: #FAC663
+	&:hover
+		background-color: #f1b74a
+	&:active
+		opacity: 0.7
+
+.filter__btn--clean
+	border: 2px solid #FAC663
+	&:hover
+		background-color: #FAC663
+	&:active
+		opacity: 0.7
+
+.filter__btn--hide
+	display: none
+
+.hide-btn
+	opacity: 0
+	visibility: hidden
+
+
+.main__catalog-block
+	display: flex
+	margin-top: 5px
+
+.catalog__filter
+	width: 281px
+
+.catalog__catalog-content
+	width: 894px
+	display: flex
+	flex-wrap: wrap
+	align-content: flex-start
+
+.catalog__catalog-empty
+	display: none
+
+.catalog__catalog-empty.show
+	display: block
+
+.catalog__card-wrp
+	margin-left: 30px
+
+.catalog__card-wrp.hide
+	display: none	
+
+.catalog__card-wrp.show
+	display: block	
+
+.card
+	width: 268px
+	border: 1px solid $grey
+	box-sizing: border-box
+	box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25)
+	border-radius: 6px
+	overflow: hidden
+	margin-bottom: 30px
+	transition: .2s
+	&:hover
+		box-shadow: 0px 0px 25px rgba(160, 160, 160, 0.45)
+
+.card__image
+	height: 185px
+	width: 100%
+	margin-bottom: 15px
+	object-fit: cover
+
+.card__title
+	font-size: 20px
+	font-weight: bold
+	padding: 0px 20px
+	margin-top: 20px
+
+.card__desc
+	padding: 11px 10px 11px 20px
+
+.desc__line
+	margin-bottom: 5px
+
+.desc__price-value
+	font-size: 18px
+	position: relative
+
+.desc__price-value
+	&:after
+   		position: absolute
+   		width: 11px
+   		height: 13px
+   		bottom: 4px
+   		background-image: url('../img/russia.svg')
+   		background-size: 13px
+   		background-position: center
+   		content: ''
+
+.desc__complectation-text
+	float: left
+	margin-right: 10px
+
+.desc__complectation-value
+	display: flex
+	align-items: center
+	width: max-content
+	font-size: 0
+
+.desc__complectation-img
+	margin-right: 6px
+
+.card__btn
+	background-color: $orange
+	border-radius: 25px
+	color: $lightgrey
+	text-decoration: none
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0px 20px 25px 
+	padding: 14px 34px 14px 0px
+	position: relative
+	transition: .2s
+	&:hover
+		background-color: $deeporange
+		&:after
+			transform: rotate(30deg)
+	&:active
+			opacity: 0.7
+
+.card__btn
+	&:after
+		width: 34px
+		height: 34px
+		background-color: $lightgrey
+		content: ''
+		position: absolute
+		right: 6px
+		border-radius: 100%
+		background-image: url('../img/paw.svg')
+		background-repeat: no-repeat
+		background-position: center 
+		transition: .3s
+
+
+@media all and (max-width: 1200px)
+	.body
+		font-size: 12px
+	.container
+		width: 960px
+	.catalog__filter
+		width: 225px
+	.catalog__card-wrp
+		margin-left: 20px
+	.catalog__catalog-content
+		width: calc( 100% - 250px )
+	.card
+		width: 216px
+		margin-bottom: 20px
+	.card__image
+		height: 155px
+		margin-bottom: 10px
+	.card__title
+		padding: 0px 10px
+		font-size: 18px
+	.card__desc
+		padding: 10px 5px 11px 10px
+	.desc__complectation-img,
+	.desc__complectation-text
+		margin-right: 4px
+	.card__btn
+		margin: 0px 10px 20px
+
+@media all and (max-width: 992px) 
+	.container
+		width: 100%
+		padding-left: 20px
+		padding-right: 20px
+		box-sizing: border-box
+	.main
+		padding-bottom: 100px
+		margin-top: 20px
+	.main__catalog-block
+		flex-direction: column
+	.catalog__catalog-content
+		width: 100%
+	.catalog__card-wrp
+		margin-left: 5px
+		margin-right: 5px
+	.card
+		width: 100%
+	.catalog__card-wrp
+		width: calc( 33.3% - 10px )
+	.catalog__filter
+		width: 100%
+		margin-bottom: 50px
+
+@media all and (max-width: 768px) 
+	.header__nav
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-end
+	.filter__btn--hide
+		background-color: #E1E1E1
+		display: flex
+	#filter_form
+	.hide-btn
+		display: none
+	.catalog__catalog-empty
+		text-align: center
+		width: 100%
+
+@media all and (max-width: 576px) 
+	.catalog__card-wrp
+		width: 100%
+	.card__image
+		height: 180px
+	.main__title
+		font-size: 24px
+	.main__sorting-container
+		top: calc( 50% + 10px )
+	.nav__item
+		margin-left: 15px
+		font-size: 13px
+	.catalog__filter
+		margin-top: 30px
+	.filter-item__title
+		font-size: 13px
+	.filter-item__properties
+		margin-top: 15px
+		margin-bottom: 25px
+	.filter__btn
+		width: 100%
+

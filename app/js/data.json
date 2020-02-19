@@ -1,0 +1,18 @@
+{
+{
+ id: 1,
+ title: 'Стул 1',
+ image: 'https://d37kg2ecsrm74.cloudfront.net/web/ikea4/images/382/0238233_PE377690_S5.jpg',
+ descr: 'бСупер стул',
+ price: 32,
+ available: true
+},
+{
+ id: 1,
+ title: 'Стул 1',
+ image: 'https://d37kg2ecsrm74.cloudfront.net/web/ikea4/images/382/0238233_PE377690_S5.jpg',
+ descr: 'бСупер стул',
+ price: 32,
+ available: true
+}
+}
